@@ -15,17 +15,14 @@ int Multiples::findMultiple(int mult1, int mult2, int cap)
 {
 	int sum = 0;
 	int i = mult1, j = mult2;
-	while (true)
+	while (cap < 1000)
 	{
-		if (i >= cap && j >= cap)
-			break;
-		if (i < cap && i % mult1 == 0){
+		if (i % mult1 == 0){
 			sum += i;
-			i += 3;
-		}if (j < cap && j % mult2 == 0){
+		}if (j % mult2 == 0){
 			sum += j;
-			j += 5;
 		}
+		cap++;
 	}
 	return sum;
 }
