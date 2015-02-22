@@ -17,9 +17,9 @@ int Multiples::findMultiple(int mult1, int mult2, int cap)
 	int i = mult1, j = mult2;
 	while (cap < 1000)
 	{
-		if (i % mult1 == 0){
+		if (cap % mult1 == 0){
 			sum += i;
-		}if (j % mult2 == 0){
+		}if (cap % mult2 == 0){
 			sum += j;
 		}
 		cap++;
